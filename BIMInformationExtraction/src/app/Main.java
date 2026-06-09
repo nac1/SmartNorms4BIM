@@ -51,7 +51,7 @@ public class Main {
 	        // 4. Load norm ontology
 	        normOntology.readOntology(ONTOLOGY_FILE);
 	               
-	        // 5. IFCtoOWL : iterates objects to populate an norm ontology
+	        // 5. IFCtoOWL : iterates objects to populate a norm ontology
 	        for (BimObject obj : finalObjects.values()) {
 	            //System.out.println("Processing: " + obj.getIfcType() + " ID: " + obj.getId()+ " place ID: "+ obj.getPlaceId());
 	            

@@ -60,7 +60,7 @@ This GitHub repository contains prompts, full prompt chains, norms, geometric al
 ```
 @misc{huitzil2026smartnorms4bim,
 	title        = {SmartNorms4BIM: Automated Code Compliance based on Semantic Reasoning},
-    author       = {Ignacio Huitzil and  Luc{\'i}a Pitarch and Marco Schorlemme,  and Nardine Osman and Pep Coll and Fernando Bobillo},
+    author       = {Ignacio Huitzil and  Luc{\'i}a Pitarch and Marco Schorlemme and Nardine Osman and Pep Coll and Fernando Bobillo},
   	year         = {2026},
   	publisher    = {SSRN},
  	doi          = {10.2139/ssrn.6329621},
