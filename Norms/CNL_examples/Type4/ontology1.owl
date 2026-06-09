@@ -1,0 +1,59 @@
+Prefix(:=<http://www.semanticweb.org/ontologies/2025/6/untitled-ontology-781#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/ontologies/2025/6/untitled-ontology-781>
+
+Declaration(Class(:home))
+Declaration(Class(:room))
+Declaration(Class(:shower))
+Declaration(Class(:sink))
+Declaration(Class(:space))
+Declaration(Class(:toilet))
+Declaration(Class(:validHomeCase1))
+Declaration(Class(:validHomeCase2))
+Declaration(ObjectProperty(:have))
+Declaration(NamedIndividual(:validHomeCase1))
+Declaration(NamedIndividual(:validHomeCase2))
+
+############################
+#   Classes
+############################
+
+# Class: :home (:home)
+
+SubClassOf(:home :space)
+
+# Class: :validHomeCase1 (:validHomeCase1)
+
+SubClassOf(:validHomeCase1 :home)
+
+# Class: :validHomeCase2 (:validHomeCase2)
+
+SubClassOf(:validHomeCase2 :home)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :validHomeCase1 (:validHomeCase1)
+
+ClassAssertion(ObjectSomeValuesFrom(:have :shower) :validHomeCase1)
+ClassAssertion(ObjectMinCardinality(2 :have :sink) :validHomeCase1)
+ClassAssertion(ObjectMinCardinality(2 :have :toilet) :validHomeCase1)
+ClassAssertion(ObjectMinCardinality(4 :have :room) :validHomeCase1)
+
+# Individual: :validHomeCase2 (:validHomeCase2)
+
+ClassAssertion(ObjectSomeValuesFrom(:have :shower) :validHomeCase2)
+ClassAssertion(ObjectSomeValuesFrom(:have :sink) :validHomeCase2)
+ClassAssertion(ObjectSomeValuesFrom(:have :toilet) :validHomeCase2)
+ClassAssertion(ObjectMaxCardinality(3 :have :room) :validHomeCase2)
+
+
+)

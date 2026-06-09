@@ -1,0 +1,48 @@
+Prefix(:=<http://example.org/railwayNorms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(obj:=<http://example.org/objectprops#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.org/ontology/trackWalkwayRequirement>
+
+Declaration(Class(:Track))
+Declaration(Class(:TracksideWalkway))
+Declaration(Class(:ValidTrackWithTwoWalkways))
+Declaration(Class(ifc:IfcElement))
+Declaration(ObjectProperty(obj:hasPart))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: obj:hasPart (obj:hasPart)
+
+ObjectPropertyDomain(obj:hasPart ifc:IfcElement)
+ObjectPropertyRange(obj:hasPart ifc:IfcElement)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Track (:Track)
+
+SubClassOf(:Track ifc:IfcElement)
+
+# Class: :TracksideWalkway (:TracksideWalkway)
+
+SubClassOf(:TracksideWalkway ifc:IfcElement)
+
+# Class: :ValidTrackWithTwoWalkways (:ValidTrackWithTwoWalkways)
+
+AnnotationAssertion(rdfs:comment :ValidTrackWithTwoWalkways "All valid tracks must include exactly two trackside walkways.")
+EquivalentClasses(:ValidTrackWithTwoWalkways ObjectIntersectionOf(:Track ObjectExactCardinality(2 obj:hasPart :TracksideWalkway)))
+
+
+)

@@ -1,0 +1,111 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(bot:=<https://w3id.org/bot#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-practicable-spaces-extended>
+
+  ############################################
+  # Classes
+  ############################################
+  Declaration(Class(:PracticableSpace))
+  Declaration(Class(:ValidPracticableSpace))
+  Declaration(Class(:InteriorRoute))
+
+  ############################################
+  # Object properties
+  ############################################
+  Declaration(ObjectProperty(:hasInteriorRoute))
+  Declaration(ObjectProperty(bot:containsElement))
+
+  ############################################
+  # Data properties (aligned to data_properties.txt)
+  ############################################
+  Declaration(DataProperty(props:classification_name_simple_property))
+  Declaration(DataProperty(props:classification_code_simple_property))
+  Declaration(DataProperty(props:diameter_simple_property))
+  Declaration(DataProperty(props:free_of_door_rotation_simple_property))
+  Declaration(DataProperty(props:width_simple_property))
+
+  ############################################
+  # IFC mappings
+  ############################################
+  SubClassOf(:PracticableSpace ifc:IfcSpace)
+  SubClassOf(:InteriorRoute ifc:IfcSpace)
+
+  ############################################
+  # Data property characteristics
+  ############################################
+  FunctionalDataProperty(props:diameter_simple_property)
+  FunctionalDataProperty(props:free_of_door_rotation_simple_property)
+  FunctionalDataProperty(props:width_simple_property)
+
+  DataPropertyRange(props:diameter_simple_property xsd:decimal)
+  DataPropertyRange(props:width_simple_property xsd:decimal)
+  DataPropertyRange(props:free_of_door_rotation_simple_property xsd:boolean)
+
+  ############################################
+  # Datatype restrictions
+  ############################################
+  Declaration(Datatype(:MinClearanceDiameter_120))
+  DatatypeDefinition(:MinClearanceDiameter_120
+    DatatypeRestriction(xsd:decimal xsd:minInclusive "1.20"^^xsd:decimal)
+  )
+
+  Declaration(Datatype(:MinRouteWidth_080))
+  DatatypeDefinition(:MinRouteWidth_080
+    DatatypeRestriction(xsd:decimal xsd:minInclusive "0.80"^^xsd:decimal)
+  )
+
+  ############################################
+  # Automatic identification of PracticableSpace via GuBIM/Uniclass
+  ############################################
+  EquivalentClasses(:PracticableSpace
+    ObjectIntersectionOf(
+      ifc:IfcSpace
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Espai practicable")   # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_25_30_35_60")      # Uniclass code
+      )
+    )
+  )
+
+  ############################################
+  # Norm formalization
+  #
+  # ValidPracticableSpace ≡ PracticableSpace AND
+  #   (diameter ≥ 1.20) AND
+  #   (free_of_door_rotation = true) AND
+  #   (hasInteriorRoute some (InteriorRoute and width ≥ 0.80))
+  ############################################
+  EquivalentClasses(:ValidPracticableSpace
+    ObjectIntersectionOf(
+      :PracticableSpace
+      DataSomeValuesFrom(props:diameter_simple_property :MinClearanceDiameter_120)
+      DataHasValue(props:free_of_door_rotation_simple_property "true"^^xsd:boolean)
+      ObjectSomeValuesFrom(
+        :hasInteriorRoute
+        ObjectIntersectionOf(
+          :InteriorRoute
+          DataSomeValuesFrom(props:width_simple_property :MinRouteWidth_080)
+        )
+      )
+    )
+  )
+
+  ############################################
+  # Labels for readability
+  ############################################
+  AnnotationAssertion(rdfs:label :PracticableSpace "Practicable space (IfcSpace / Espai practicable / Accessible space)"@en)
+  AnnotationAssertion(rdfs:label :ValidPracticableSpace "Valid practicable space — circle Ø≥1.20 m free of door rotation; route width ≥0.80 m"@en)
+  AnnotationAssertion(rdfs:label :InteriorRoute "Interior route (IfcSpace)"@en)
+  AnnotationAssertion(rdfs:label props:classification_name_simple_property "Classification name property"@en)
+  AnnotationAssertion(rdfs:label props:classification_code_simple_property "Classification code property"@en)
+  AnnotationAssertion(rdfs:label props:diameter_simple_property "Diameter / clearance circle (decimal meters)"@en)
+  AnnotationAssertion(rdfs:label props:free_of_door_rotation_simple_property "Free of door rotation impact (boolean)"@en)
+  AnnotationAssertion(rdfs:label props:width_simple_property "Passage width (decimal meters)"@en)
+
+)

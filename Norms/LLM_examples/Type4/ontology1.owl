@@ -1,0 +1,98 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(bot:=<https://w3id.org/bot#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-homes-by-rooms>
+
+  ############################################
+  # Declarations: Classes
+  ############################################
+  Declaration(Class(:Home))
+  Declaration(Class(:Room))
+  Declaration(Class(:Toilet))
+  Declaration(Class(:Sink))
+  Declaration(Class(:Shower))
+  Declaration(Class(:SmallHome))
+  Declaration(Class(:LargeHome))
+  Declaration(Class(:ValidSmallHome))
+  Declaration(Class(:ValidLargeHome))
+  Declaration(Class(:ValidHome))
+
+  ############################################
+  # Object Properties
+  ############################################
+  Declaration(ObjectProperty(:hasRoom))
+  Declaration(ObjectProperty(bot:containsElement))
+
+  ############################################
+  # Basic IFC alignments
+  ############################################
+  SubClassOf(:Home ifc:IfcSpace)
+  SubClassOf(:Room ifc:IfcSpace)
+  SubClassOf(:Toilet ifc:IfcElement)
+  SubClassOf(:Sink ifc:IfcElement)
+  SubClassOf(:Shower ifc:IfcElement)
+
+  ############################################
+  # Home classification by number of rooms
+  ############################################
+  EquivalentClasses(:SmallHome
+    ObjectIntersectionOf(
+      :Home
+      ObjectMaxCardinality(3 :hasRoom :Room)
+    )
+  )
+
+  EquivalentClasses(:LargeHome
+    ObjectIntersectionOf(
+      :Home
+      ObjectMinCardinality(4 :hasRoom :Room)
+    )
+  )
+
+  ############################################
+  # Validity rules by home size
+  ############################################
+
+  # ---- ValidSmallHome ----
+  EquivalentClasses(:ValidSmallHome
+    ObjectIntersectionOf(
+      :SmallHome
+      ObjectSomeValuesFrom(bot:containsElement :Toilet)
+      ObjectSomeValuesFrom(bot:containsElement :Sink)
+      ObjectSomeValuesFrom(bot:containsElement :Shower)
+    )
+  )
+
+  # ---- ValidLargeHome ----
+  EquivalentClasses(:ValidLargeHome
+    ObjectIntersectionOf(
+      :LargeHome
+      ObjectMinCardinality(2 bot:containsElement :Toilet)
+      ObjectMinCardinality(2 bot:containsElement :Sink)
+      ObjectSomeValuesFrom(bot:containsElement :Shower)
+    )
+  )
+
+  # ---- ValidHome (union of both) ----
+  EquivalentClasses(:ValidHome
+    ObjectUnionOf(:ValidSmallHome :ValidLargeHome)
+  )
+
+  ############################################
+  # Labels for readability
+  ############################################
+  AnnotationAssertion(rdfs:label :Home "Home (IfcSpace representing a dwelling)"@en)
+  AnnotationAssertion(rdfs:label :Room "Room (IfcSpace)"@en)
+  AnnotationAssertion(rdfs:label :Toilet "Toilet (sanitary fixture)"@en)
+  AnnotationAssertion(rdfs:label :Sink "Sink (wash basin)"@en)
+  AnnotationAssertion(rdfs:label :Shower "Shower (shower fixture)"@en)
+  AnnotationAssertion(rdfs:label :SmallHome "Home with 0–3 rooms"@en)
+  AnnotationAssertion(rdfs:label :LargeHome "Home with 4+ rooms"@en)
+  AnnotationAssertion(rdfs:label :ValidSmallHome "Valid small home (≥1 toilet, 1 sink, 1 shower)"@en)
+  AnnotationAssertion(rdfs:label :ValidLargeHome "Valid large home (≥2 toilets, 2 sinks, 1 shower)"@en)
+  AnnotationAssertion(rdfs:label :ValidHome "Valid home (small or large, meets hygiene rule)"@en)
+)

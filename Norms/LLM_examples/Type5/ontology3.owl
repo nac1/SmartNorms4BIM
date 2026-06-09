@@ -1,0 +1,95 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-access-doors-extended>
+
+  ############################################
+  # Declarations: Classes
+  ############################################
+  Declaration(Class(:AccessDoor))
+  Declaration(Class(:ValidAccessDoor))
+
+  ############################################
+  # Declarations: Data Properties
+  ############################################
+  Declaration(DataProperty(props:classification_name_simple_property))
+  Declaration(DataProperty(props:classification_code_simple_property))
+  Declaration(DataProperty(props:width_simple_property))
+  Declaration(DataProperty(props:height_simple_property))
+  Declaration(DataProperty(props:unit_simple_property))
+
+  ############################################
+  # Align AccessDoor with IFC
+  ############################################
+  SubClassOf(:AccessDoor ifc:IfcDoor)
+
+  ############################################
+  # Data property characteristics
+  ############################################
+  FunctionalDataProperty(props:width_simple_property)
+  FunctionalDataProperty(props:height_simple_property)
+  FunctionalDataProperty(props:unit_simple_property)
+
+  DataPropertyRange(props:width_simple_property xsd:decimal)
+  DataPropertyRange(props:height_simple_property xsd:decimal)
+  DataPropertyRange(props:unit_simple_property xsd:string)
+
+  ############################################
+  # Datatype restrictions (OWL 2 Functional Syntax correct form)
+  ############################################
+  # Minimum width >= 0.80
+  Declaration(Datatype(:MinWidth_080))
+  DatatypeDefinition(:MinWidth_080
+    DatatypeRestriction(xsd:decimal xsd:minInclusive "0.80"^^xsd:decimal)
+  )
+
+  # Minimum height >= 2.00
+  Declaration(Datatype(:MinHeight_200))
+  DatatypeDefinition(:MinHeight_200
+    DatatypeRestriction(xsd:decimal xsd:minInclusive "2.00"^^xsd:decimal)
+  )
+
+  ############################################
+  # Automatic classification of AccessDoor via GuBIM / Uniclass
+  # (applies BEFORE the numeric/unit checks)
+  ############################################
+
+  # Example GuBIM/Uniclass names & codes (substitute real codes/names if you have specific ones)
+  EquivalentClasses(:AccessDoor
+    ObjectIntersectionOf(
+      ifc:IfcDoor
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Porta d'accés")     # GuBIM name
+        DataHasValue(props:classification_code_simple_property "Ss_25_30_20_10")    # Uniclass code
+      )
+    )
+  )
+
+  ############################################
+  # Norm formalization:
+  # ValidAccessDoor ≡ AccessDoor AND
+  #   width >= 0.80 (decimal) AND height >= 2.00 (decimal) AND unit = "meters"
+  ############################################
+  EquivalentClasses(:ValidAccessDoor
+    ObjectIntersectionOf(
+      :AccessDoor
+      DataSomeValuesFrom(props:width_simple_property :MinWidth_080)
+      DataSomeValuesFrom(props:height_simple_property :MinHeight_200)
+      DataHasValue(props:unit_simple_property "meters"^^xsd:string)
+    )
+  )
+
+  ############################################
+  # Annotations / labels
+  ############################################
+  AnnotationAssertion(rdfs:label :AccessDoor "Access door (IfcDoor; identified by GuBIM/Uniclass)"@en)
+  AnnotationAssertion(rdfs:label :ValidAccessDoor "Valid access door — width ≥ 0.80 m, height ≥ 2.00 m, unit = meters"@en)
+  AnnotationAssertion(rdfs:label props:width_simple_property "Width property (decimal)"@en)
+  AnnotationAssertion(rdfs:label props:height_simple_property "Height property (decimal)"@en)
+  AnnotationAssertion(rdfs:label props:unit_simple_property "Unit property (string; expected 'meters')"@en)
+
+)

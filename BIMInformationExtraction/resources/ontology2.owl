@@ -1,0 +1,92 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(bot:=<https://w3id.org/bot#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-bathrooms-auto-classification>
+
+  ############################################
+  # Declarations
+  ############################################
+  Declaration(Class(:Bathroom))
+  Declaration(Class(:ValidBathroom))
+  Declaration(Class(:HygienicEquipment))
+  Declaration(Class(:Sink))
+  Declaration(Class(:Toilet))
+  Declaration(Class(:Shower))
+
+  Declaration(ObjectProperty(bot:containsElement))
+
+  Declaration(DataProperty(props:classification_name_simple_property))
+  Declaration(DataProperty(props:classification_code_simple_property))
+
+  ############################################
+  # Core mapping: Bathroom
+  ############################################
+  SubClassOf(:Bathroom ifc:IfcSpace)
+
+  ############################################
+  # Automatic identification using classification values
+  ############################################
+
+  # ---- SINK ----
+  EquivalentClasses(:Sink
+    ObjectIntersectionOf(
+      ifc:IfcElement
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Piques")          # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_40_50_12_72")  # Uniclass code
+      )
+    )
+  )
+
+  # ---- TOILET ----
+  EquivalentClasses(:Toilet
+    ObjectIntersectionOf(
+      ifc:IfcElement
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Inodors")         # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_40_50_15_87")  # Uniclass code
+      )
+    )
+  )
+
+  # ---- SHOWER ----
+  EquivalentClasses(:Shower
+    ObjectIntersectionOf(
+      ifc:IfcElement
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Plats de dutxa")  # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_40_50_30_85")  # Uniclass code
+      )
+    )
+  )
+
+  ############################################
+  # Hygienic equipment union
+  ############################################
+  EquivalentClasses(:HygienicEquipment ObjectUnionOf(:Sink :Toilet :Shower))
+
+  ############################################
+  # Valid bathroom rule
+  ############################################
+  EquivalentClasses(:ValidBathroom
+    ObjectIntersectionOf(
+      :Bathroom
+      ObjectSomeValuesFrom(bot:containsElement :Sink)
+      ObjectSomeValuesFrom(bot:containsElement :Toilet)
+      ObjectSomeValuesFrom(bot:containsElement :Shower)
+    )
+  )
+
+  ############################################
+  # Annotations (for clarity)
+  ############################################
+  AnnotationAssertion(rdfs:label :Sink "Sink (identified via GuBIM/Uniclass)"@en)
+  AnnotationAssertion(rdfs:label :Toilet "Toilet (identified via GuBIM/Uniclass)"@en)
+  AnnotationAssertion(rdfs:label :Shower "Shower (identified via GuBIM/Uniclass)"@en)
+  AnnotationAssertion(rdfs:label :ValidBathroom "ValidBathroom"@en)
+)

@@ -1,0 +1,73 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(bot:=<https://w3id.org/bot#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-bathrooms>
+
+  ############################################
+  # Declarations: classes
+  ############################################
+  Declaration(Class(:Bathroom))
+  Declaration(Class(:HygienicEquipment))
+  Declaration(Class(:Sink))
+  Declaration(Class(:Toilet))
+  Declaration(Class(:Shower))
+  Declaration(Class(:ValidBathroom))
+
+  # Reference IFC classes (declared here as namespaced IRIs; ifcOWL provides them)
+  Declaration(Class(ifc:IfcSpace))
+  Declaration(Class(ifc:IfcElement))
+
+  ############################################
+  # Declarations: object properties
+  ############################################
+  Declaration(ObjectProperty(bot:containsElement))
+
+  ############################################
+  # Class hierarchy / mappings
+  ############################################
+  # A Bathroom is typed as an IfcSpace (mapping from regulation concept to IFC)
+  SubClassOf(:Bathroom ifc:IfcSpace)
+
+  # Hygienic fixtures (domain classes) are modeled as domain-specific classes
+  # and are declared as subclasses of a generic IfcElement so they can be matched to IFC instances.
+  SubClassOf(:Sink ifc:IfcElement)
+  SubClassOf(:Toilet ifc:IfcElement)
+  SubClassOf(:Shower ifc:IfcElement)
+
+  ############################################
+  # Norm formalization:
+  # "All the valid bathrooms must have hygienic equipment that consists of at least
+  #  one sink, one toilet and one shower"
+  #
+  # We express: ValidBathroom ≡ Bathroom AND (containsElement some Sink) AND (containsElement some Toilet) AND (containsElement some Shower)
+  ############################################
+  EquivalentClasses(:ValidBathroom
+    ObjectIntersectionOf(
+      :Bathroom
+      ObjectSomeValuesFrom(bot:containsElement :Sink)
+      ObjectSomeValuesFrom(bot:containsElement :Toilet)
+      ObjectSomeValuesFrom(bot:containsElement :Shower)
+    )
+  )
+
+  ############################################
+  # Optional: assert that HygienicEquipment is the union of the three items
+  ############################################
+  EquivalentClasses(:HygienicEquipment
+    ObjectUnionOf(:Sink :Toilet :Shower)
+  )
+
+  ############################################
+  # (Optional) helpful labels (for readability in tools)
+  ############################################
+  AnnotationAssertion(rdfs:label :Bathroom "Bathroom"@en)
+  AnnotationAssertion(rdfs:label :Sink "Sink"@en)
+  AnnotationAssertion(rdfs:label :Toilet "Toilet"@en)
+  AnnotationAssertion(rdfs:label :Shower "Shower"@en)
+  AnnotationAssertion(rdfs:label :ValidBathroom "ValidBathroom"@en)
+
+)

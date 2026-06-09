@@ -1,0 +1,59 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(sid:=<http://example.org/semanticIdentifiers#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(props:=<http://example.org/props#>)
+
+
+Ontology(<http://example.org/norms/longbridge-example1-linguistic>
+
+Declaration(Class(:Bridge))
+Declaration(Class(:LongBridge))
+Declaration(Class(ifc:IfcElement))
+Declaration(DataProperty(props:length_simple_property))
+Declaration(Datatype(sid:LongBridgeLength))
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: props:length_simple_property (props:length_simple_property)
+
+FunctionalDataProperty(props:length_simple_property)
+DataPropertyRange(props:length_simple_property rdfs:Literal)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: sid:LongBridgeLength (sid:LongBridgeLength)
+
+AnnotationAssertion(:fuzzyLabel sid:LongBridgeLength "<fuzzyOwl2 fuzzyType=\"datatype\">
+<Datatype type=\"rightshoulder\" a=\"215\" b=\"490\" />
+</fuzzyOwl2>")
+
+DatatypeDefinition(sid:LongBridgeLength DatatypeRestriction(xsd:decimal xsd:minInclusive "-1"^^xsd:decimal xsd:maxInclusive "1000"^^xsd:decimal))
+
+############################
+#   Classes
+############################
+
+# Class: :Bridge (Bridge (IfcElement))
+
+AnnotationAssertion(rdfs:label :Bridge "Bridge (IfcElement)"@en)
+SubClassOf(:Bridge ifc:IfcElement)
+
+# Class: :LongBridge (Bridge with a long (qualitative) length)
+
+AnnotationAssertion(rdfs:comment :LongBridge "This class expresses the linguistic norm 'bridges with a long length' where 'long' is not quantitatively defined. The qualitative meaning is captured by the datatype sid:LongBridgeLength."@en)
+AnnotationAssertion(rdfs:label :LongBridge "Bridge with a long (qualitative) length"@en)
+EquivalentClasses(:LongBridge ObjectIntersectionOf(:Bridge DataSomeValuesFrom(props:length_simple_property sid:LongBridgeLength)))
+
+
+)

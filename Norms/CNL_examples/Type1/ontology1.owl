@@ -1,0 +1,27 @@
+Prefix(:=<http://www.semanticweb.org/ontologies/2025/6/untitled-ontology-773#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/ontologies/2025/6/untitled-ontology-773>
+
+Declaration(Class(:bathroom))
+Declaration(Class(:shower))
+Declaration(Class(:sink))
+Declaration(Class(:space))
+Declaration(Class(:toilet))
+Declaration(ObjectProperty(:have))
+
+############################
+#   Classes
+############################
+
+# Class: :bathroom (:bathroom)
+
+SubClassOf(:bathroom ObjectIntersectionOf(ObjectIntersectionOf(:space ObjectSomeValuesFrom(:have :sink)) ObjectSomeValuesFrom(:have :shower) ObjectSomeValuesFrom(:have :toilet)))
+
+
+)

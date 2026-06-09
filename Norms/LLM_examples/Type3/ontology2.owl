@@ -1,0 +1,73 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-doors-extended>
+
+  ############################################
+  # Declarations: Classes
+  ############################################
+  Declaration(Class(:Door))
+  Declaration(Class(:ValidDoor))
+
+  ############################################
+  # Declarations: Data Properties
+  ############################################
+  Declaration(DataProperty(props:classification_name_simple_property))
+  Declaration(DataProperty(props:classification_code_simple_property))
+  Declaration(DataProperty(props:width_simple_property))
+  Declaration(DataProperty(props:height_simple_property))
+
+  ############################################
+  # Core mapping: Door as IFC class
+  ############################################
+  SubClassOf(:Door ifc:IfcDoor)
+
+  ############################################
+  # Data property characteristics (functional + datatype)
+  ############################################
+  FunctionalDataProperty(props:width_simple_property)
+  FunctionalDataProperty(props:height_simple_property)
+
+  DataPropertyRange(props:width_simple_property xsd:decimal)
+  DataPropertyRange(props:height_simple_property xsd:decimal)
+
+  ############################################
+  # Classification-based recognition of Door
+  ############################################
+  # A Door is any IfcDoor or IfcElement instance carrying either the GuBIM or Uniclass name/code
+  EquivalentClasses(:Door
+    ObjectIntersectionOf(
+      ifc:IfcDoor
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Porta")               # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_25_30_20_00")      # Uniclass code
+      )
+    )
+  )
+
+  ############################################
+  # Norm formalization:
+  # "All the valid doors must have exactly one width property and one height property in the decimal range."
+  ############################################
+  EquivalentClasses(:ValidDoor
+    ObjectIntersectionOf(
+      :Door
+      DataExactCardinality(1 props:width_simple_property xsd:decimal)
+      DataExactCardinality(1 props:height_simple_property xsd:decimal)
+    )
+  )
+
+  ############################################
+  # Annotation labels
+  ############################################
+  AnnotationAssertion(rdfs:label :Door "Door (IfcDoor / Porta / Doors and frames)"@en)
+  AnnotationAssertion(rdfs:label :ValidDoor "Valid door — must have exactly one width and one height (decimal)"@en)
+  AnnotationAssertion(rdfs:label props:classification_name_simple_property "Classification name property"@en)
+  AnnotationAssertion(rdfs:label props:classification_code_simple_property "Classification code property"@en)
+  AnnotationAssertion(rdfs:label props:width_simple_property "Width property (decimal, functional)"@en)
+  AnnotationAssertion(rdfs:label props:height_simple_property "Height property (decimal, functional)"@en)
+)

@@ -1,0 +1,98 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(bot:=<https://w3id.org/bot#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-practicable-spaces>
+
+  ############################################
+  # Class declarations
+  ############################################
+  Declaration(Class(:PracticableSpace))
+  Declaration(Class(:ValidPracticableSpace))
+  Declaration(Class(:InteriorRoute))
+
+  ############################################
+  # Object properties
+  ############################################
+  Declaration(ObjectProperty(:hasInteriorRoute))
+  Declaration(ObjectProperty(bot:containsElement))
+
+  ############################################
+  # Data property declarations (suggested names — align to your props file if needed)
+  ############################################
+  Declaration(DataProperty(props:clearance_diameter_simple_property))                # diameter of inscribable circle (m)
+  Declaration(DataProperty(props:clearance_free_of_door_rotation_simple_property))   # boolean: free from door rotation impact
+  Declaration(DataProperty(props:route_min_width_simple_property))                   # route minimum width (m)
+
+  ############################################
+  # Map classes to IFC concepts
+  ############################################
+  SubClassOf(:PracticableSpace ifc:IfcSpace)
+  SubClassOf(:InteriorRoute ifc:IfcSpace)
+
+  ############################################
+  # Data property characteristics / ranges
+  ############################################
+  FunctionalDataProperty(props:clearance_diameter_simple_property)
+  FunctionalDataProperty(props:clearance_free_of_door_rotation_simple_property)
+  FunctionalDataProperty(props:route_min_width_simple_property)
+
+  DataPropertyRange(props:clearance_diameter_simple_property xsd:decimal)
+  DataPropertyRange(props:route_min_width_simple_property xsd:decimal)
+  DataPropertyRange(props:clearance_free_of_door_rotation_simple_property xsd:boolean)
+
+  ############################################
+  # Datatype restrictions (OWL 2 Functional Syntax form)
+  # - Min clearance diameter >= 1.20 (meters)
+  # - Min route width >= 0.80 (meters)
+  ############################################
+
+  Declaration(Datatype(:MinClearanceDiameter_120))
+  DatatypeDefinition(:MinClearanceDiameter_120
+    DatatypeRestriction(xsd:decimal xsd:minInclusive "1.20"^^xsd:decimal)
+  )
+
+  Declaration(Datatype(:MinRouteWidth_080))
+  DatatypeDefinition(:MinRouteWidth_080
+    DatatypeRestriction(xsd:decimal xsd:minInclusive "0.80"^^xsd:decimal)
+  )
+
+  ############################################
+  # Norm formalization
+  #
+  # ValidPracticableSpace ≡ PracticableSpace AND
+  #   (clearance_diameter >= 1.20) AND
+  #   (clearance_free_of_door_rotation = true) AND
+  #   (hasInteriorRoute some (InteriorRoute and route_min_width >= 0.80))
+  ############################################
+
+  EquivalentClasses(:ValidPracticableSpace
+    ObjectIntersectionOf(
+      :PracticableSpace
+      DataSomeValuesFrom(props:clearance_diameter_simple_property :MinClearanceDiameter_120)
+      DataHasValue(props:clearance_free_of_door_rotation_simple_property "true"^^xsd:boolean)
+      ObjectSomeValuesFrom(
+        :hasInteriorRoute
+        ObjectIntersectionOf(
+          :InteriorRoute
+          DataSomeValuesFrom(props:route_min_width_simple_property :MinRouteWidth_080)
+        )
+      )
+    )
+  )
+
+  ############################################
+  # Helpful labels
+  ############################################
+  AnnotationAssertion(rdfs:label :PracticableSpace "Practicable space (IfcSpace)"@en)
+  AnnotationAssertion(rdfs:label :ValidPracticableSpace "Valid practicable space — Ø inscribable circle ≥ 1.20 m; free from door rotation impact; interior routes width ≥ 0.80 m"@en)
+  AnnotationAssertion(rdfs:label :InteriorRoute "Interior route (IfcSpace)"@en)
+  AnnotationAssertion(rdfs:label props:clearance_diameter_simple_property "Clearance diameter (m)"@en)
+  AnnotationAssertion(rdfs:label props:clearance_free_of_door_rotation_simple_property "Clearance free of door rotation (boolean)"@en)
+  AnnotationAssertion(rdfs:label props:route_min_width_simple_property "Route minimum width (m)"@en)
+
+)

@@ -1,0 +1,76 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-access-doors>
+
+  ############################################
+  # Declarations: Classes
+  ############################################
+  Declaration(Class(:AccessDoor))
+  Declaration(Class(:ValidAccessDoor))
+
+  ############################################
+  # Declarations: Data Properties
+  ############################################
+  Declaration(DataProperty(props:width_simple_property))
+  Declaration(DataProperty(props:height_simple_property))
+  Declaration(DataProperty(props:unit_simple_property))
+
+  ############################################
+  # Align AccessDoor with IFC
+  ############################################
+  SubClassOf(:AccessDoor ifc:IfcDoor)
+
+  ############################################
+  # Data property characteristics
+  ############################################
+  FunctionalDataProperty(props:width_simple_property)
+  FunctionalDataProperty(props:height_simple_property)
+  FunctionalDataProperty(props:unit_simple_property)
+
+  DataPropertyRange(props:width_simple_property xsd:decimal)
+  DataPropertyRange(props:height_simple_property xsd:decimal)
+  DataPropertyRange(props:unit_simple_property xsd:string)
+
+  ############################################
+  # Datatype restrictions
+  ############################################
+
+  Declaration(Datatype(:MinWidth_080))
+  DatatypeDefinition(:MinWidth_080
+  DatatypeRestriction(xsd:decimal  xsd:minInclusive "0.80"^^xsd:decimal)
+  )
+
+
+  Declaration(Datatype(:MinHeight_200))
+  DatatypeDefinition(:MinHeight_200
+  DatatypeRestriction(xsd:decimal xsd:minInclusive "2.00"^^xsd:decimal)
+  )
+  
+  ############################################
+  # Norm formalization:
+  # "All valid access doors ... must have a minimum passage width of 0.80 m,
+  #  a minimum clear height of 2 m, and unit 'meters'."
+  ############################################
+  EquivalentClasses(:ValidAccessDoor
+    ObjectIntersectionOf(
+      :AccessDoor
+      DataSomeValuesFrom(props:width_simple_property :MinWidth_080)
+      DataSomeValuesFrom(props:height_simple_property :MinHeight_200)
+      DataHasValue(props:unit_simple_property "meters"^^xsd:string)
+    )
+  )
+
+  ############################################
+  # Optional: helpful labels
+  ############################################
+  AnnotationAssertion(rdfs:label :AccessDoor "Access door (IfcDoor providing access to home)"@en)
+  AnnotationAssertion(rdfs:label :ValidAccessDoor "Valid access door — width ≥ 0.80 m, height ≥ 2 m, unit = meters"@en)
+  AnnotationAssertion(rdfs:label props:width_simple_property "Width property (decimal)"@en)
+  AnnotationAssertion(rdfs:label props:height_simple_property "Height property (decimal)"@en)
+  AnnotationAssertion(rdfs:label props:unit_simple_property "Unit property (string)"@en)
+)

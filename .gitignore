@@ -1,0 +1,41 @@
+##############################
+# Visual Studio
+##############################
+.vs/
+Debug/
+Release/
+x64/
+x86/
+*.obj
+*.exe
+*.ilk
+*.pdb
+*.ipch
+
+##############################
+## Eclipse
+##############################
+.settings/
+bin/
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+##############################
+## Miscellaneous
+##############################
+*.log
+
+##############################
+## OS X
+##############################
+#Thumbs.db
+.DS_Store

@@ -1,0 +1,53 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(props:=<http://example.org/props#>)
+
+
+Ontology(<http://example.org/norms/bridges-long-length>
+
+Declaration(Class(:Bridge))
+Declaration(Class(:LongBridge))
+Declaration(Class(ifc:IfcElement))
+Declaration(DataProperty(props:length_simple_property))
+Declaration(Datatype(:MinLength_100))
+
+############################
+#   Data Properties
+############################
+
+# Data Property: props:length_simple_property (props:length_simple_property)
+
+FunctionalDataProperty(props:length_simple_property)
+DataPropertyRange(props:length_simple_property xsd:decimal)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: :MinLength_100 (:MinLength_100)
+
+DatatypeDefinition(:MinLength_100 DatatypeRestriction(xsd:decimal xsd:minInclusive "100.0"^^xsd:decimal))
+
+
+############################
+#   Classes
+############################
+
+# Class: :Bridge (Bridge (mapped to ifc:IfcElement by default; set to ifc:IfcBridge for IFC4.3+))
+
+AnnotationAssertion(rdfs:label :Bridge "Bridge (mapped to ifc:IfcElement by default; set to ifc:IfcBridge for IFC4.3+)"@en)
+SubClassOf(:Bridge ifc:IfcElement)
+
+# Class: :LongBridge (Bridge with long length (length ≥ 100.0 m, unit = meters))
+
+AnnotationAssertion(rdfs:label :LongBridge "Bridge with long length (length ≥ 100.0 m, unit = meters)"@en)
+EquivalentClasses(:LongBridge ObjectIntersectionOf(:Bridge DataSomeValuesFrom(props:length_simple_property :MinLength_100)))
+
+
+)

@@ -1,0 +1,1002 @@
+SL_20_10_47,Legislative chamber
+SL_20_10_49,Legislative chamber viewing gallery
+SL_20_15_15,Confidential meeting room
+SL_20_15_27,Enclosed office
+SL_20_15_50,Meeting room
+SL_20_15_59,Office
+SL_20_15_61,Open-plan office
+SL_20_15_71,Reception area
+SL_20_15_73,Reprographic room
+SL_20_45_27,Electric motor vehicle charging point
+SL_20_45_29,Fuel filling station air and water point
+SL_20_45_30,Fuel filling station forecourt
+SL_20_45_31,Fuel filling station tank area
+SL_20_45_53,Motor vehicle maintenance area
+SL_20_45_95,Vehicle inspection pit
+SL_20_45_96,Vehicle servicing area
+SL_20_50_03,Ambient wholesale space
+SL_20_50_05,Auction room
+SL_20_50_10,Beauty salon
+SL_20_50_12,Checkout point
+SL_20_50_22,Department store shop floor
+SL_20_50_29,Financial and professional service outlet
+SL_20_50_30,Fitting room
+SL_20_50_32,Food and drink outlet
+SL_20_50_36,Hair and beauty salon
+SL_20_50_37,Hair salon
+SL_20_50_47,Livestock auction room
+SL_20_50_51,Market stall
+SL_20_50_55,Motor vehicle showroom
+SL_20_50_70,Refrigerated wholesale space
+SL_20_50_72,Retail kiosk
+SL_20_50_85,Supermarket shop floor
+SL_20_50_86,Tan spray booth
+SL_20_50_87,Tattoo and piercing parlour
+SL_20_50_96,Waste and scrap yard
+SL_20_55_45,Letter sorting office
+SL_20_55_50,Mail order sorting and despatch facility
+SL_20_55_60,Parcel sorting office
+SL_20_55_65,Post room
+SL_20_60_08,Bombardment shelter
+SL_20_60_27,Emergency shelter
+SL_20_60_70,Radiation protection shelter
+SL_20_60_98,War emergency centre
+SL_20_62_65,Parade ground
+SL_20_65_15,Command and control space
+SL_20_65_28,Examination room
+SL_20_65_39,Identification control room
+SL_20_65_40,Identification suite
+SL_20_65_41,Interview monitoring room
+SL_20_65_42,Interview room
+SL_20_65_65,Police boxe
+SL_20_70_15,Courtroom
+SL_20_70_18,Courtroom viewing gallery
+SL_20_70_23,Defendant dock
+SL_20_70_28,Evidence room
+SL_20_70_41,Judicial benche
+SL_20_70_44,Jury boxe
+SL_20_70_97,Witness stand
+SL_20_75_02,Accessible cell
+SL_20_75_13,Charge area
+SL_20_75_15,Communal inmate dayroom
+SL_20_75_17,Constant observation cell
+SL_20_75_22,Detention cell
+SL_20_75_23,Dirty protest cell
+SL_20_75_24,Double-occupancy cell
+SL_20_75_25,Dry cell
+SL_20_75_28,Exercise yard
+SL_20_75_35,Guard station
+SL_20_75_38,Holding cell
+SL_20_75_39,Holding room
+SL_20_75_46,Listener suite
+SL_20_75_48,Low-mobility cell
+SL_20_75_50,Medical single-occupancy cell
+SL_20_75_51,Medical single-occupancy end-of-life cell
+SL_20_75_52,Medical single-occupancy isolation cell
+SL_20_75_53,Medical single-occupancy social care cell
+SL_20_75_54,Medical multiple-occupancy ward
+SL_20_75_55,Multiple-occupancy bedroom
+SL_20_75_65,Protest cell
+SL_20_75_70,Regular care and separation unit (CaSU) cell
+SL_20_75_75,Sally port
+SL_20_75_77,Secure visiting room
+SL_20_75_79,Single-occupancy cell
+SL_20_75_82,Specimen capture cell
+SL_20_75_95,Vehicle impound yard
+SL_20_80_03,Artillery firing range
+SL_20_80_30,Firing range
+SL_20_80_63,Pistol firing range
+SL_20_80_72,Rifle firing range
+SL_20_85_63,Pedestrian security checkpoint
+SL_20_85_75,Security control space
+SL_20_85_80,Security office
+SL_20_85_95,Vehicular security checkpoint
+SL_20_90_23,Emergency and rescue equipment space
+SL_20_90_25,Escape stair
+SL_20_90_28,Firefighting stair
+SL_20_90_30,Fire refuge space
+SL_20_90_31,Fire training space
+SL_20_90_60,Protected escape corridor
+SL_20_95_20,Detection zone
+SL_20_95_28,Evacuation zone
+SL_20_95_30,Fire compartment
+SL_20_95_32,Fire suppression zone
+SL_20_95_80,Smoke control zone
+SL_25_05_72,Commemoration site
+SL_25_10_01,Activity studio
+SL_25_10_04,Art room
+SL_25_10_05,Assembly hall
+SL_25_10_08,Biology teaching laboratory
+SL_25_10_13,Chemistry teaching laboratory
+SL_25_10_14,Classroom
+SL_25_10_15,Common room
+SL_25_10_17,Craft classroom
+SL_25_10_21,Dance studio
+SL_25_10_22,Dissection theatre
+SL_25_10_24,Drama studio
+SL_25_10_25,Driving skid pan
+SL_25_10_26,Driving tuition space
+SL_25_10_28,Educational workshop
+SL_25_10_30,Food room
+SL_25_10_39,Infant classroom
+SL_25_10_40,Information and communication technology (ICT) laboratory
+SL_25_10_41,Information and communication technology (ICT)-rich classroom
+SL_25_10_44,Junior classroom
+SL_25_10_46,Language laboratory
+SL_25_10_47,Lecture theatre
+SL_25_10_53,Multi-purpose practical room
+SL_25_10_54,Music and drama classroom
+SL_25_10_55,Music room
+SL_25_10_57,Nursery playroom
+SL_25_10_58,Open access computer laboratory
+SL_25_10_60,Outdoor classroom
+SL_25_10_61,Outdoor class space
+SL_25_10_66,Physic teaching laboratory
+SL_25_10_67,Primary practical room
+SL_25_10_68,Primary special educational need (SEN) classroom
+SL_25_10_72,Reception classroom
+SL_25_10_74,Science studio
+SL_25_10_75,Science laboratory
+SL_25_10_76,Secondary special educational need (SEN) classroom
+SL_25_10_77,Semi-open classbase
+SL_25_10_78,Seminar room
+SL_25_10_79,Shared teaching area
+SL_25_10_81,Sixth form special educational need (SEN) classroom
+SL_25_10_84,Study space
+SL_25_20_04,Artist' studio
+SL_25_20_18,Creative art studio
+SL_25_20_23,Designer' studio
+SL_25_30_02,Anechoic chamber
+SL_25_30_04,Astronomical observatory
+SL_25_30_05,Autoclave room
+SL_25_30_07,Biological laboratory
+SL_25_30_08,Biological sample storage room
+SL_25_30_09,Biomechanic laboratory
+SL_25_30_10,Bioscience laboratory
+SL_25_30_13,Chemistry laboratory
+SL_25_30_14,Clean room
+SL_25_30_15,Clinical biochemistry laboratory
+SL_25_30_16,Clinical microbiology laboratory
+SL_25_30_17,Clinical pathology laboratory
+SL_25_30_19,Containment laboratory
+SL_25_30_21,Darkroom
+SL_25_30_22,Dental laboratory
+SL_25_30_23,Dissection room
+SL_25_30_24,EMI shielded room
+SL_25_30_25,Ecology laboratory
+SL_25_30_26,Earth science laboratory
+SL_25_30_27,Engineering laboratory
+SL_25_30_28,Experiment control room
+SL_25_30_29,Flow cytometry room
+SL_25_30_30,Food testing laboratory
+SL_25_30_31,Forensic laboratory
+SL_25_30_32,Forensic scientific support room
+SL_25_30_33,Geology laboratory
+SL_25_30_35,Growth chamber
+SL_25_30_42,Instrument room
+SL_25_30_46,Laboratory cold room
+SL_25_30_47,Laboratory warm room
+SL_25_30_50,Material testing laboratory
+SL_25_30_66,Physic laboratory
+SL_25_30_68,Psychology laboratory
+SL_25_30_70,Radiation shielded room
+SL_25_30_71,Radiation laboratory
+SL_25_30_76,Scientific equipment room
+SL_25_30_78,Seismograph room
+SL_25_30_87,Temperature-controlled room
+SL_25_30_88,Testing room
+SL_25_40_03,Animal care training room
+SL_25_40_11,Catering training kitchen
+SL_25_40_15,Construction workshop
+SL_25_40_22,Design technology studio
+SL_25_40_23,Design technology workshop
+SL_25_40_27,Engineering workshop
+SL_25_40_36,Hair and beauty training salon
+SL_25_40_38,Health and clinical training room
+SL_25_40_40,Information and communication technology (ICT)-rich studio
+SL_25_40_42,Independent life skill room
+SL_25_40_50,Manufacturing workshop
+SL_25_40_51,Media studio
+SL_25_40_61,Outdoor training space
+SL_25_40_65,Photography studio
+SL_25_40_70,Rail training simulator
+SL_25_40_90,Training restaurant
+SL_25_40_94,Vehicle workshop
+SL_25_50_15,Collection exhibition space
+SL_25_50_16,Conservation room
+SL_25_50_21,Diorama room
+SL_25_50_26,External gallery
+SL_25_50_29,Fauna exhibition space
+SL_25_50_31,Flora exhibition space
+SL_25_50_42,Internal gallery
+SL_25_50_63,Planetarium
+SL_25_50_94,Viewing space
+SL_25_70_02,Archive
+SL_25_70_04,Audiovisual archive
+SL_25_70_05,Audiovisual study room
+SL_25_70_13,Conference room
+SL_25_70_47,Library room
+SL_25_70_72,Reading room
+SL_25_70_73,Record store
+SL_25_75_04,Art and design resource space
+SL_25_75_37,Heavy practical resource space
+SL_25_75_40,Information and communication technology (ICT) resource space
+SL_25_75_45,Learning resource centre
+SL_25_75_47,Light practical resource space
+SL_25_75_55,Music practice room
+SL_25_75_76,School library
+SL_25_75_80,Small group room
+SL_25_75_82,Special educational need (SEN) resource space
+SL_25_80_22,Design technology preparation room
+SL_25_80_27,Engineering preparation room
+SL_25_80_30,Food preparation room
+SL_25_80_75,Science preparation room
+SL_25_90_30,Faith space
+SL_25_90_65,Prayer room
+SL_25_90_78,Shrine
+SL_30_10_57,Offshore oil and ga drilling space
+SL_30_10_59,Onshore oil and ga drilling space
+SL_30_10_69,Quarrying area
+SL_30_10_85,Surface mine working
+SL_30_10_91,Underground mine chamber
+SL_30_10_93,Underground mineshaft
+SL_30_10_94,Underground mine tunnel
+SL_30_20_70,Radioactive decontamination space
+SL_30_20_75,Radioactive waste package transfer space
+SL_30_30_33,Ga processing space
+SL_30_30_58,Oil processing space
+SL_30_30_59,Ore processing space
+SL_30_40_07,Bottling room
+SL_30_40_10,Butter making room
+SL_30_40_18,Cheesemaking room
+SL_30_40_30,Fish processing room
+SL_30_40_32,Fresh fruit and vegetable packing room
+SL_30_40_44,Juicing room
+SL_30_40_50,Meat processing room
+SL_30_40_54,Milk processing room
+SL_30_40_63,Plant fibre sorting room
+SL_30_40_65,Poultry and game processing room
+SL_30_40_75,Sawmill
+SL_30_40_80,Silk production room
+SL_30_40_82,Spinning room
+SL_30_40_87,Tannery
+SL_30_40_88,Threshing room
+SL_30_40_90,Tobacco drying room
+SL_30_40_96,Weaving room
+SL_30_40_98,Wool sorting room
+SL_30_50_27,Electronic clean room
+SL_30_50_30,Heavy industrial space
+SL_30_50_40,Kiln room
+SL_30_50_43,Light industrial space
+SL_30_50_50,Manufacturing workshop
+SL_30_50_60,Packaging line
+SL_30_50_61,Paint spray booth
+SL_30_50_62,Pharmaceutical clean room
+SL_30_50_64,Printing space
+SL_30_60_03,Animal cage washing area
+SL_30_60_11,Caretaker room
+SL_30_60_13,Clothe drying and airing room
+SL_30_60_22,Decontamination space
+SL_30_60_24,Dry cleaning space
+SL_30_60_42,Ironing room
+SL_30_60_46,Laundrette
+SL_30_60_47,Laundry
+SL_30_60_50,Maintenance workshop
+SL_30_60_75,Service laundry
+SL_30_60_93,Vehicle-cleaning area
+SL_30_60_94,Vehicle washe
+SL_30_60_96,Wash-up space
+SL_30_80_96,Watermill house
+SL_30_80_97,Windmill house
+SL_30_85_08,Boat repair space
+SL_30_85_20,Dock face
+SL_30_85_22,Dock sill
+SL_30_85_24,Dry dock chamber
+SL_30_85_30,Floating dock
+SL_30_90_33,Good delivery bay
+SL_30_90_48,Loading dock
+SL_30_90_80,Sorting and distribution space
+SL_30_90_84,Storage yard
+SL_30_90_96,Warehouse space
+SL_32_10_03,Arable field
+SL_32_10_26,Farmyard
+SL_32_10_28,Fishery
+SL_32_10_30,Fish farm tank
+SL_32_10_34,Glasshouse space
+SL_32_10_37,Hedge
+SL_32_10_39,Hothouse space
+SL_32_10_47,Livestock field
+SL_32_10_52,Milking parlour
+SL_32_10_55,Mushroom cultivation space
+SL_32_10_60,Paddock
+SL_32_10_65,Polytunnel space
+SL_32_10_66,Poultry battery
+SL_32_10_77,Shearing space
+SL_32_10_78,Sheep dip
+SL_32_10_94,Vineyard space
+SL_32_15_17,Dam crest
+SL_32_15_29,Dam face
+SL_32_15_37,Dam heel
+SL_32_15_81,Dam spillway crest
+SL_32_15_82,Dam spillway funnel
+SL_32_15_83,Dam spillway face
+SL_32_15_89,Dam toe
+SL_32_35_02,Access strip
+SL_32_35_04,Allotment
+SL_32_35_22,Decking area
+SL_32_35_24,Driveway
+SL_32_35_30,Flower bed
+SL_32_35_46,Lawn
+SL_32_35_60,Patio
+SL_32_35_94,Vegetable garden
+SL_32_40_06,Berm
+SL_32_40_16,Contaminated land area
+SL_32_40_26,Easement access area
+SL_32_40_27,Embankment core
+SL_32_40_28,Embankment crest
+SL_32_40_29,Embankment face
+SL_32_40_30,Embankment toe
+SL_32_40_31,Embankment transition zone
+SL_32_40_32,Fill zone
+SL_32_40_37,High ground crest
+SL_32_40_38,High ground face
+SL_32_40_70,Rain gauge central well
+SL_32_40_71,Rain gauge turf wall
+SL_32_40_90,Tree protection zone
+SL_32_50_03,Anchorage
+SL_32_50_06,Beach ramp
+SL_32_50_11,Canoe pass
+SL_32_50_12,Canoe portage space
+SL_32_50_18,Deep berth
+SL_32_50_30,Ford
+SL_32_50_43,Jetty core
+SL_32_50_44,Jetty face
+SL_32_50_45,Jetty toe
+SL_32_50_46,Landing face
+SL_32_50_47,Lifeboat vessel launch space
+SL_32_50_53,Mooring
+SL_32_50_68,Quay face
+SL_32_50_69,Quay stem
+SL_32_50_72,Roller boat lift
+SL_32_50_76,Scour protection apron
+SL_32_50_79,Slipway
+SL_32_65_12,Cave
+SL_32_65_71,Riverbed
+SL_32_65_72,River reache
+SL_32_65_74,Sand dune active zone
+SL_32_65_75,Sand dune stabilized zone
+SL_32_80_03,Amenity grass area
+SL_32_80_08,Brownfield site
+SL_32_80_23,Disused mineral extraction site
+SL_32_80_46,Living roof area
+SL_32_80_47,Living willow structure
+SL_32_80_48,Managed water habitat
+SL_32_80_49,Managed wildlife habitat
+SL_32_80_50,Mowing strip
+SL_32_80_89,Transport corridor verge
+SL_32_80_95,Wetland habitat
+SL_32_80_96,Wildflower garden
+SL_32_80_97,Woodland habitat
+SL_32_85_06,Barrier beach face
+SL_32_85_10,Breakwater face
+SL_32_85_15,Control gate sill
+SL_32_85_30,Fishtail
+SL_32_85_35,Groyne face
+SL_32_85_42,Intake tower
+SL_32_85_58,Orifice flow control structure
+SL_32_85_60,Paddle and rymer
+SL_32_85_65,Preliminary weir
+SL_32_85_70,Roundhead
+SL_32_85_81,Spillway crest
+SL_32_85_82,Spillway funnel
+SL_32_85_83,Spillway face
+SL_32_85_84,Stilling well
+SL_32_85_94,Vortex flow control structure
+SL_32_85_95,Water-retaining wall core
+SL_32_85_96,Water-retaining wall face
+SL_32_85_97,Water-retaining wall toe
+SL_32_85_98,Weir face
+SL_32_95_15,Channel side
+SL_32_95_18,Culvert soffit
+SL_32_95_20,Culvert wall
+SL_32_95_23,Fish, eel and lamprey pass crest
+SL_32_95_29,Fish, eel and lamprey pass face
+SL_32_95_30,Fish, eel and lamprey pass sill
+SL_35_10_08,Birthing room
+SL_35_10_10,Burn unit
+SL_35_10_15,Consulting room
+SL_35_10_22,Dental treatment room
+SL_35_10_23,Diagnostic laboratory
+SL_35_10_30,First aid post
+SL_35_10_31,First aid room
+SL_35_10_36,Hearing test room
+SL_35_10_39,Hydrotherapy pool
+SL_35_10_42,Intensive care unit
+SL_35_10_43,Isolation unit
+SL_35_10_51,Medical scanning and x-ray room
+SL_35_10_53,Medical treatment room
+SL_35_10_58,Occupational therapy room
+SL_35_10_59,Operating theatre
+SL_35_10_63,Phlebotomy room
+SL_35_10_64,Pharmaceutical dispensary
+SL_35_10_65,Phototherapy space
+SL_35_10_66,Physiotherapy room
+SL_35_10_70,Radiography room
+SL_35_10_71,Radiotherapy room
+SL_35_10_72,Radiology reading room
+SL_35_10_73,Recovery room
+SL_35_10_74,Rehabilitation room
+SL_35_10_82,Sterilization room
+SL_35_10_88,Therapy room
+SL_35_10_94,Venepuncture room
+SL_35_10_96,Ward
+SL_35_10_97,Warm water pool
+SL_35_50_17,Crèche and nurserie
+SL_35_50_21,Day-care space
+SL_35_50_60,Parent and baby room
+SL_35_50_69,Quiet calming space
+SL_35_50_75,Sauna room
+SL_35_50_78,Sensory room
+SL_35_50_90,Treatment room
+SL_35_60_14,Commercial kitchen
+SL_35_60_16,Cooking space
+SL_35_60_30,Food preparation area
+SL_35_60_45,Kitchenette
+SL_35_60_56,Non-domestic kitchen
+SL_35_60_78,Servery area
+SL_35_70_12,Cemetery plot
+SL_35_70_15,Funerary columbarium
+SL_35_70_18,Crematorium oven room
+SL_35_70_32,Funeral vault
+SL_35_70_50,Mausoleum
+SL_35_70_90,Tomb
+SL_35_80_00,Ablution room
+SL_35_80_01,Accessible changing room
+SL_35_80_03,Accessible toilet
+SL_35_80_06,Baby changing room
+SL_35_80_08,Bathroom
+SL_35_80_39,Hygiene room
+SL_35_80_59,Open shower area
+SL_35_80_68,Public toilet
+SL_35_80_80,Shower
+SL_35_80_85,Supervisable toilet
+SL_35_80_89,Toilet
+SL_35_85_00,Animal ark
+SL_35_85_01,Animal cage
+SL_35_85_03,Animal enclosure
+SL_35_85_04,Animal exercise arena
+SL_35_85_05,Aviary
+SL_35_85_12,Cattle byre
+SL_35_85_39,Fish tank
+SL_35_85_45,Kennel
+SL_35_85_47,Loose boxe
+SL_35_85_62,Pen
+SL_35_85_83,Stable
+SL_35_85_84,Stable yard
+SL_35_85_85,Stall
+SL_35_85_86,Sty
+SL_35_85_88,Tack room
+SL_35_90_10,Animal burial plot
+SL_35_90_15,Animal clinic
+SL_35_90_22,Animal dispensary
+SL_35_90_32,Animal funerary space
+SL_35_90_34,Animal grooming facility
+SL_35_90_37,Animal hydrotherapy pool
+SL_35_90_59,Animal operating theatre
+SL_35_90_72,Animal ward
+SL_40_05_03,Amusement arcade
+SL_40_05_13,Casino floor
+SL_40_05_27,Esport space
+SL_40_05_42,Indoor fairground space
+SL_40_05_43,Indoor play space
+SL_40_05_58,Observation deck
+SL_40_05_59,Outdoor activity area
+SL_40_05_60,Outdoor fairground space
+SL_40_05_68,Public garden
+SL_40_05_79,Sensory garden
+SL_40_05_81,Soft play room
+SL_40_20_06,Bar
+SL_40_20_09,Beverage station
+SL_40_20_22,Dining hall
+SL_40_20_27,Enclosed dining area
+SL_40_20_28,Food court
+SL_40_20_42,Indoor dining room
+SL_40_20_43,Informal dining space
+SL_40_20_59,Outdoor dining area
+SL_40_35_65,Protected historic zone
+SL_40_55_04,Artificial grass play area
+SL_40_55_34,Grass play and social area
+SL_40_55_36,Hard play and social area
+SL_40_55_59,Outdoor seating area
+SL_40_55_61,Playground
+SL_40_55_64,Play equipment area
+SL_40_55_97,Woodland play and social area
+SL_40_60_05,Auditorium
+SL_40_60_06,Bandstand
+SL_40_60_11,Catwalk
+SL_40_60_13,Circus ring
+SL_40_60_21,Dance floor
+SL_40_60_31,Fixed stage
+SL_40_60_40,Indoor theatre space
+SL_40_60_52,Mobile stage
+SL_40_60_58,Orchestra pit
+SL_40_60_59,Outdoor theatre space
+SL_40_60_78,Sound recording studio
+SL_40_60_80,Sound shell
+SL_40_60_81,Sound stage
+SL_40_65_04,Audience lobby
+SL_40_65_24,Dressing room
+SL_40_65_35,Green room
+SL_40_65_47,Lighting and audio control space
+SL_40_65_66,Projection booth
+SL_40_65_70,Recording control space
+SL_40_65_72,Rehearsal room
+SL_40_65_76,Scenery control booth
+SL_40_65_79,Sound control space
+SL_40_65_80,Sound lock
+SL_40_65_85,Stage wing
+SL_42_15_04,Artificial grass pitche
+SL_42_15_17,Cricket field
+SL_42_15_18,Cricket pitche
+SL_42_15_32,Grass athletic area
+SL_42_15_33,Grass pitche
+SL_42_15_34,Grass tenni court
+SL_42_15_36,Hard outdoor tenni court
+SL_42_15_37,High jump area
+SL_42_15_44,Javelin throwing area
+SL_42_15_47,Long jump track and pit
+SL_42_15_55,Multi-use game court
+SL_42_15_59,Outdoor sport court
+SL_42_15_60,Outdoor sport pitche and field
+SL_42_15_65,Pole vaulting area
+SL_42_15_72,Rounder field
+SL_42_15_74,Running track
+SL_42_15_78,Shot put and hammer throwing area
+SL_42_40_09,Bouldering space
+SL_42_40_14,Climbing wall space
+SL_42_40_20,Cycle track
+SL_42_40_23,Dojo
+SL_42_40_30,Fitness room
+SL_42_40_35,Gymnasium
+SL_42_40_37,Gymnastic area
+SL_42_40_42,Indoor sport court
+SL_42_40_79,Snooker, billiard and pool hall
+SL_42_40_82,Sport hall
+SL_42_40_83,Squash court
+SL_42_40_90,Ten pin bowling alley
+SL_42_55_01,Archery range
+SL_42_55_06,Ball-stop net area
+SL_42_55_07,BMX cycling track
+SL_42_55_08,Bowling green
+SL_42_55_17,Cross-country cycling course
+SL_42_55_18,Cross-country equestrian course
+SL_42_55_19,Cross-country rallying course
+SL_42_55_20,Cross-country running course
+SL_42_55_21,Cycling trail
+SL_42_55_23,Dog racing track
+SL_42_55_26,Equestrian arena
+SL_42_55_35,Golf fairway
+SL_42_55_39,Horse racing course
+SL_42_55_52,Mobility training trail
+SL_42_55_53,Motor racing track
+SL_42_55_56,Nature trail
+SL_42_55_58,Outdoor climbing area
+SL_42_55_60,Parkour course
+SL_42_55_65,Putting green
+SL_42_55_72,Road running course
+SL_42_55_76,Skateboarding park
+SL_42_55_82,Speedway track
+SL_42_55_90,Trim trail
+SL_42_55_96,Walking trail
+SL_42_80_65,Press boxe
+SL_42_80_88,Technical area and dugout
+SL_42_85_23,Diving pool
+SL_42_85_41,Indoor swimming pool
+SL_42_85_59,Outdoor swimming pool
+SL_42_85_64,Plunge pool
+SL_42_85_80,Spa pool
+SL_42_85_82,Splash pool
+SL_42_85_94,Water flume, slide and tube
+SL_42_85_97,Wave pool
+SL_42_85_98,Whirlpool
+SL_42_90_11,Canoe slalom course
+SL_42_90_12,Canoe sprint course
+SL_42_90_50,Motorboat course
+SL_42_90_73,Rowing course
+SL_42_90_75,Sailing course
+SL_42_90_97,Water skiing course
+SL_42_90_98,White water canoe course
+SL_42_95_02,Alpine skiing course
+SL_42_95_04,Artificial ski slope
+SL_42_95_08,Bobsleigh course
+SL_42_95_19,Cross-country skiing course
+SL_42_95_20,Curling rink
+SL_42_95_32,Freestyle skiing course
+SL_42_95_40,Ice skating rink
+SL_42_95_76,Short track speed skating track
+SL_42_95_79,Ski jump
+SL_42_95_80,Snowboarding course
+SL_42_95_83,Speed skating course
+SL_45_10_06,Balcony
+SL_45_10_08,Bedroom-study
+SL_45_10_09,Bedroom
+SL_45_10_12,Caravan pitche
+SL_45_10_14,Communal living room
+SL_45_10_16,Concierge office
+SL_45_10_18,Conservatory
+SL_45_10_22,Domestic dining room
+SL_45_10_23,Domestic kitchen
+SL_45_10_24,Dormitory
+SL_45_10_37,Hotel room
+SL_45_10_44,Kitchen-dining room
+SL_45_10_45,Kitchen-dining-living room
+SL_45_10_49,Living room
+SL_45_10_57,Nursing home bedroom
+SL_45_10_60,Panic room
+SL_45_10_78,Single-occupancy bedroom
+SL_45_10_85,Study
+SL_45_10_88,Tent pitche
+SL_45_10_93,Utility room
+SL_45_10_94,Veranda
+SL_50_10_94,Waste ga storage space
+SL_50_25_36,Grip inlet
+SL_50_25_41,Inlet discharge
+SL_50_25_59,Outlet discharge
+SL_50_30_68,Pump-out station
+SL_50_35_08,Bioretention basin
+SL_50_35_60,Solid waste storage space
+SL_50_40_24,Dry waste storage space
+SL_50_40_72,Refuse storage space
+SL_50_50_92,Waste ga treatment space
+SL_50_60_94,Waste liquid treatment space
+SL_50_60_95,Waste liquid storage space
+SL_50_75_26,Effluent outfall
+SL_50_75_28,Evaporation pond
+SL_50_75_35,Wastewater grass plot
+SL_50_75_71,Wastewater reed bed
+SL_50_75_85,Stormwater overflow
+SL_50_75_95,Wastewater wetland
+SL_50_80_40,Dry waste treatment space
+SL_50_80_70,Dry waste disposal space
+SL_55_05_30,Ga extraction space
+SL_55_05_70,Ga treatment space
+SL_55_10_10,Oil extraction space
+SL_55_10_50,Oil treatment space
+SL_55_15_10,Water extraction space
+SL_55_15_50,Water treatment space
+SL_55_15_70,Raw water intake
+SL_55_20_34,Ga storage space
+SL_55_20_65,Service ga supply pipe
+SL_55_30_80,Sprinkler tank enclosure
+SL_55_50_32,Fuel storage area
+SL_55_50_58,Oil storage space
+SL_55_70_65,Private water supply pipe
+SL_55_70_95,Water supply pedestal
+SL_60_60_20,Cryogenic storage room
+SL_60_60_29,Freezer room
+SL_60_60_70,Refrigeration room
+SL_60_80_25,Drying room
+SL_70_10_82,Solar array
+SL_70_10_91,Turbine room
+SL_70_20_05,Auxiliary transformer equipment bay
+SL_70_20_08,Bus coupler bay
+SL_70_20_10,Bus section bay
+SL_70_20_11,Cable sealing end bay
+SL_70_20_13,Capacitor bank
+SL_70_20_26,Earthing transformer bay
+SL_70_20_27,Enclosed high-voltage switchgear room
+SL_70_20_29,Electricity feeder bay
+SL_70_20_30,Flexible a.c. transmission system (FACT) bay
+SL_70_20_32,Grid battery bay
+SL_70_20_33,Grid transformer bay
+SL_70_20_35,High-voltage electricity substation chamber
+SL_70_20_50,Main busbar section
+SL_70_20_64,Power transformer equipment bay
+SL_70_20_70,Reactor equipment bay
+SL_70_20_72,Relay and control equipment bay
+SL_70_20_83,Static VAR compensator bay
+SL_70_20_85,Supergrid transformer bay
+SL_70_20_86,Synchronous condenser bay
+SL_70_20_89,Transmission cable section
+SL_70_20_90,Transmission line span
+SL_70_20_92,Underground transmission cable inspection and monitoring access point
+SL_70_30_06,Battery room
+SL_70_30_15,Combined switch and direct current (d.c.) distribution room
+SL_70_30_22,Direct current (d.c.) distribution room
+SL_70_30_26,Electrical distribution pedestal
+SL_70_30_45,Low-voltage electricity substation chamber
+SL_70_30_52,Metering room
+SL_70_30_83,Substation bay
+SL_70_30_92,Uninterruptible power supply room
+SL_75_10_21,Communication equipment room
+SL_75_10_23,Digital data transmission network
+SL_75_10_70,Radio broadcast control booth
+SL_75_10_73,Radio studio
+SL_75_10_88,Telecommunication control space
+SL_75_10_89,Telephone boxe and booth
+SL_75_10_90,Telephone exchange space
+SL_75_10_91,Television broadcast control booth
+SL_75_10_93,Television studio
+SL_75_30_80,Signal boxe
+SL_75_40_28,Electronic security control room
+SL_75_50_30,Exclusion zone
+SL_75_50_33,Ga zone
+SL_80_05_01,Aircraft apron bay
+SL_80_05_02,Aeroplane landing strip
+SL_80_05_03,Aeroplane runway
+SL_80_05_04,Aircraft fuelling space
+SL_80_05_05,Aircraft manoeuvring area
+SL_80_05_06,Aircraft standing area
+SL_80_05_07,Aircraft storage space
+SL_80_05_33,Gliding runway
+SL_80_05_37,Hang-gliding launch space
+SL_80_05_38,Helipad
+SL_80_05_82,Spacecraft landing strip
+SL_80_05_84,Spacecraft launch pad
+SL_80_10_06,Baggage claim area
+SL_80_10_07,Baggage handling area
+SL_80_10_09,Boarding area
+SL_80_10_10,Bus stop
+SL_80_10_12,Cargo handling area
+SL_80_10_13,Cargo loading area
+SL_80_10_16,Concourse
+SL_80_10_20,Custom control area
+SL_80_10_22,Departure lounge
+SL_80_10_55,Passenger gate
+SL_80_10_60,Passport control office
+SL_80_10_77,Security screening area
+SL_80_10_80,Ship gangway
+SL_80_10_94,Vehicle drop-off area
+SL_80_15_01,Aircraft cleaning space
+SL_80_15_04,Aircraft repair space
+SL_80_15_06,Airport control space
+SL_80_15_79,Spacecraft cleaning space
+SL_80_15_81,Spacecraft preparation space
+SL_80_15_82,Spacecraft repair space
+SL_80_20_13,Cableway
+SL_80_30_34,Gondola repair and cleaning space
+SL_80_30_35,Gondola storage space
+SL_80_35_04,Arrestor bed
+SL_80_35_08,Bus manoeuvring area
+SL_80_35_09,Bus travel lane
+SL_80_35_11,Car manoeuvring area
+SL_80_35_13,Carriageway
+SL_80_35_16,Central reservation
+SL_80_35_17,Channelizing island
+SL_80_35_18,Crossover space
+SL_80_35_19,Cycle crossing
+SL_80_35_20,Cycle lane
+SL_80_35_22,Diversion route
+SL_80_35_36,Hard shoulder
+SL_80_35_37,Hard standing
+SL_80_35_39,Highway pull-off
+SL_80_35_40,Highway roundabout
+SL_80_35_42,Intersection
+SL_80_35_44,Junction
+SL_80_35_45,Lane
+SL_80_35_46,Lay-by and passing place
+SL_80_35_57,Non-motorized use crossing
+SL_80_35_59,Oxbow layby
+SL_80_35_62,Pedestrian crossing
+SL_80_35_63,Pedestrian route
+SL_80_35_64,Pedestrian refuge and island
+SL_80_35_66,Police ramp
+SL_80_35_70,Railway crossing
+SL_80_35_71,Refuge area
+SL_80_35_72,Roadside rest area
+SL_80_35_74,Road section
+SL_80_35_75,Roundabout
+SL_80_35_77,Roadside reservation
+SL_80_35_78,Side road carriageway
+SL_80_35_80,Slip road carriageway
+SL_80_35_81,Soft shoulder
+SL_80_35_87,Taxi rank
+SL_80_35_90,Truck manoeuvring area
+SL_80_35_94,Vaulted space
+SL_80_40_15,Covered path
+SL_80_40_60,Path
+SL_80_45_01,Accessible parking space
+SL_80_45_09,Bus standing space
+SL_80_45_11,Car park attendant booth
+SL_80_45_13,Car park ramp
+SL_80_45_15,Cycle parking space
+SL_80_45_40,Indoor vehicle parking space
+SL_80_45_59,Outdoor vehicle parking space
+SL_80_45_91,Truck standing space
+SL_80_50_11,Carriage cleaning space
+SL_80_50_24,Double-sided platform
+SL_80_50_26,Engine fuelling area
+SL_80_50_27,Engine inspection pit
+SL_80_50_28,Engine servicing area
+SL_80_50_29,Engine wash area
+SL_80_50_44,Railway junction
+SL_80_50_47,Light rail stop
+SL_80_50_50,Marshalling yard
+SL_80_50_58,Railway overpass
+SL_80_50_70,Rail repair space
+SL_80_50_71,Railway side reservation
+SL_80_50_72,Railway line
+SL_80_50_74,Railway section
+SL_80_50_76,Railway siding
+SL_80_50_77,Railway signal control space
+SL_80_50_78,Rolling stock inspection space
+SL_80_50_79,Signalling equipment room
+SL_80_50_80,Single-sided platform
+SL_80_50_85,Stabling yard
+SL_80_50_88,Track paralleling hut
+SL_80_50_90,Train halt
+SL_80_50_92,Railway underpass
+SL_80_50_95,Wagon decontamination space
+SL_80_50_97,Wagon maintenance space
+SL_80_70_11,Canal lock chamber
+SL_80_70_33,Gate quoin
+SL_80_70_37,Harbour lock
+SL_80_70_46,Lock gate sill
+SL_80_70_48,Lock island
+SL_80_70_96,Winding hole
+SL_80_92_34,Geospatial grid
+SL_80_92_37,Horizontal alignment grid
+SL_80_92_94,Vertical alignment grid
+SL_80_94_02,Abutment face
+SL_80_94_07,Bearing shelve
+SL_80_94_09,Bridge apron
+SL_80_94_71,Retaining wall apron
+SL_80_96_15,Concourse tunnel
+SL_80_96_18,Crossover tunnel
+SL_80_96_20,Drift tunnel portal
+SL_80_96_44,Junction tunnel
+SL_80_96_58,Overrun tunnel
+SL_80_96_60,Passageway tunnel
+SL_80_96_64,Platform tunnel
+SL_80_96_78,Siding tunnel
+SL_80_96_89,Tunnel boring machine (TBM) launching and retrieval shaft
+SL_80_96_90,Tunnel dive
+SL_80_96_91,Turnback tunnel
+SL_80_98_09,Bridge headroom
+SL_80_98_13,Chainage
+SL_80_98_15,Collapse radius
+SL_80_98_46,Lateral safety zone
+SL_80_98_48,Longitudinal safety zone
+SL_80_98_70,Rail kinematic envelope
+SL_80_98_72,Restricted speed zone
+SL_80_98_75,Safety clearance zone
+SL_80_98_83,Structure gauge
+SL_80_98_85,Swept path area
+SL_80_98_90,Tunnel headroom
+SL_80_98_94,Vehicle loading gauge
+SL_80_98_97,Working width
+SL_82_61_61,Passenger seating space
+SL_82_61_62,Passenger standing space
+SL_82_61_63,Passenger wheelchair space
+SL_82_61_65,Priority passenger seating space
+SL_90_10_02,Airlock
+SL_90_10_04,Atrium
+SL_90_10_08,Breezeway
+SL_90_10_15,Corridor
+SL_90_10_16,Covered walkway and internal bridge
+SL_90_10_17,Courtyard
+SL_90_10_24,Drop-off and collection area
+SL_90_10_27,Entrance hall
+SL_90_10_28,Escalator
+SL_90_10_34,Good conveyor
+SL_90_10_35,Good lift
+SL_90_10_36,Hallway
+SL_90_10_46,Landing
+SL_90_10_47,Lift
+SL_90_10_51,Lobby
+SL_90_10_62,Passenger lift
+SL_90_10_64,Porche
+SL_90_10_68,Public square
+SL_90_10_71,Retail circulation space
+SL_90_10_77,Shelter
+SL_90_10_87,Stairway
+SL_90_10_90,Travellator
+SL_90_10_94,Vestibule
+SL_90_10_95,Walkway
+SL_90_10_96,Wheelchair circulation space
+SL_90_20_01,Accident and emergency waiting room
+SL_90_20_02,Air space
+SL_90_20_04,Audience seating area
+SL_90_20_05,Audience standing area
+SL_90_20_08,Breakout space
+SL_90_20_13,Changing room
+SL_90_20_14,Cloakroom
+SL_90_20_15,Corporate boxe and VIP seating
+SL_90_20_16,Customer service counter area
+SL_90_20_27,Entry point
+SL_90_20_69,Queuing area
+SL_90_20_80,Social space
+SL_90_20_82,Spectator seating area
+SL_90_20_83,Spectator standing area
+SL_90_20_85,Staff room
+SL_90_20_86,Staff workroom
+SL_90_20_88,Temporary seating area
+SL_90_20_89,Ticket office
+SL_90_20_91,Terrace
+SL_90_20_94,Vacant space
+SL_90_20_96,Waiting room
+SL_90_20_98,Work booth
+SL_90_30_25,Excavation volume
+SL_90_30_30,Finishe allowance
+SL_90_30_80,Space proofing envelope
+SL_90_30_90,Tolerance zone
+SL_90_40_46,Level
+SL_90_50_04,Arm depot and armoury
+SL_90_50_06,Baggage storage area
+SL_90_50_07,Battery store
+SL_90_50_08,Blood bank
+SL_90_50_09,Boat storage space
+SL_90_50_10,Building service store
+SL_90_50_11,Cargo storage area
+SL_90_50_12,Carport
+SL_90_50_13,Chemical store
+SL_90_50_14,Clothe store
+SL_90_50_15,Cold store
+SL_90_50_16,Cleaner' store
+SL_90_50_17,Cycle storage space
+SL_90_50_18,Classroom store
+SL_90_50_19,Coat and bag store
+SL_90_50_22,Dining furniture store
+SL_90_50_25,Dungstead
+SL_90_50_27,Equipment store
+SL_90_50_28,Explosive and ordnance storeroom
+SL_90_50_29,Food store
+SL_90_50_30,Feed store
+SL_90_50_31,Flammable chemical store
+SL_90_50_32,Furniture store
+SL_90_50_33,Garage
+SL_90_50_35,General storeroom
+SL_90_50_36,Good store
+SL_90_50_37,Grain store
+SL_90_50_38,Hazardous waste storage space
+SL_90_50_44,Janitor store
+SL_90_50_45,Keg store
+SL_90_50_46,Larder and pantry
+SL_90_50_47,Left luggage store
+SL_90_50_48,Locker room
+SL_90_50_52,Mineral storage space
+SL_90_50_54,Morgue
+SL_90_50_55,Mortuary
+SL_90_50_65,Pharmaceutical store
+SL_90_50_71,Raw material storage space
+SL_90_50_73,Retractable seating storage
+SL_90_50_77,Secure storeroom
+SL_90_50_80,Solid fuel storeroom
+SL_90_50_82,Sport equipment store
+SL_90_50_84,Storage room
+SL_90_50_85,Storage silo
+SL_90_50_86,Storage tank
+SL_90_50_87,Teaching resource store
+SL_90_50_88,Tissue and organ store
+SL_90_50_90,Vault and strong room
+SL_90_50_93,Walk-in wardrobe
+SL_90_50_98,Wine cellar
+SL_90_60_01,Access space
+SL_90_60_02,Air shaft
+SL_90_60_07,Belfry
+SL_90_60_10,Cavity
+SL_90_60_13,Chute
+SL_90_60_18,Crawl space
+SL_90_60_30,Flue
+SL_90_60_49,Lift pit
+SL_90_60_50,Lift shaft
+SL_90_60_51,Light well
+SL_90_60_64,Platform void
+SL_90_60_72,Roof surface space
+SL_90_60_74,Roof void
+SL_90_90_01,Access floor void
+SL_90_90_08,Boiler room
+SL_90_90_13,Ceiling void
+SL_90_90_15,Control room
+SL_90_90_32,Furnace room
+SL_90_90_42,Incinerator room
+SL_90_90_48,Lift machine room
+SL_90_90_63,Plant enclosure
+SL_90_90_64,Plant room
+SL_90_90_68,Pump room
+SL_90_90_77,Server room
+SL_90_90_78,Service shaft
+SL_90_90_85,Switch room
+SL_90_90_87,Tank room
+SL_90_90_90,Transformer room
+SL_90_90_96,Wall service void

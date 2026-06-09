@@ -1,0 +1,142 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(bot:=<https://w3id.org/bot#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-homes-by-rooms-extended>
+
+  ############################################
+  # Class declarations
+  ############################################
+  Declaration(Class(:Home))
+  Declaration(Class(:Room))
+  Declaration(Class(:Toilet))
+  Declaration(Class(:Sink))
+  Declaration(Class(:Shower))
+  Declaration(Class(:SmallHome))
+  Declaration(Class(:LargeHome))
+  Declaration(Class(:ValidSmallHome))
+  Declaration(Class(:ValidLargeHome))
+  Declaration(Class(:ValidHome))
+
+  ############################################
+  # Object properties
+  ############################################
+  Declaration(ObjectProperty(:hasRoom))
+  Declaration(ObjectProperty(bot:containsElement))
+
+  ############################################
+  # Data properties
+  ############################################
+  Declaration(DataProperty(props:classification_name_simple_property))
+  Declaration(DataProperty(props:classification_code_simple_property))
+
+  ############################################
+  # IFC mappings
+  ############################################
+  SubClassOf(:Home ifc:IfcSpace)
+  SubClassOf(:Room ifc:IfcSpace)
+  SubClassOf(:Toilet ifc:IfcElement)
+  SubClassOf(:Sink ifc:IfcElement)
+  SubClassOf(:Shower ifc:IfcElement)
+
+  ############################################
+  # Automatic classification (GuBIM + Uniclass)
+  ############################################
+
+  # ---- Toilet ----
+  EquivalentClasses(:Toilet
+    ObjectIntersectionOf(
+      ifc:IfcElement
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Inodors")          # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_40_50_15_87")   # Uniclass code
+      )
+    )
+  )
+
+  # ---- Sink ----
+  EquivalentClasses(:Sink
+    ObjectIntersectionOf(
+      ifc:IfcElement
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Piques")           # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_40_50_12_72")   # Uniclass code
+      )
+    )
+  )
+
+  # ---- Shower ----
+  EquivalentClasses(:Shower
+    ObjectIntersectionOf(
+      ifc:IfcElement
+      ObjectUnionOf(
+        DataHasValue(props:classification_name_simple_property "Plats de dutxa")   # GuBIM
+        DataHasValue(props:classification_code_simple_property "Ss_40_50_30_85")   # Uniclass code
+      )
+    )
+  )
+
+  ############################################
+  # Home classification by room count
+  ############################################
+  EquivalentClasses(:SmallHome
+    ObjectIntersectionOf(
+      :Home
+      ObjectMaxCardinality(3 :hasRoom :Room)
+    )
+  )
+
+  EquivalentClasses(:LargeHome
+    ObjectIntersectionOf(
+      :Home
+      ObjectMinCardinality(4 :hasRoom :Room)
+    )
+  )
+
+  ############################################
+  # Validity rules
+  ############################################
+
+  # ---- ValidSmallHome ----
+  EquivalentClasses(:ValidSmallHome
+    ObjectIntersectionOf(
+      :SmallHome
+      ObjectSomeValuesFrom(bot:containsElement :Toilet)
+      ObjectSomeValuesFrom(bot:containsElement :Sink)
+      ObjectSomeValuesFrom(bot:containsElement :Shower)
+    )
+  )
+
+  # ---- ValidLargeHome ----
+  EquivalentClasses(:ValidLargeHome
+    ObjectIntersectionOf(
+      :LargeHome
+      ObjectMinCardinality(2 bot:containsElement :Toilet)
+      ObjectMinCardinality(2 bot:containsElement :Sink)
+      ObjectSomeValuesFrom(bot:containsElement :Shower)
+    )
+  )
+
+  # ---- ValidHome (union) ----
+  EquivalentClasses(:ValidHome
+    ObjectUnionOf(:ValidSmallHome :ValidLargeHome)
+  )
+
+  ############################################
+  # Labels for clarity
+  ############################################
+  AnnotationAssertion(rdfs:label :Home "Home (IfcSpace representing dwelling)"@en)
+  AnnotationAssertion(rdfs:label :Room "Room (IfcSpace)"@en)
+  AnnotationAssertion(rdfs:label :Toilet "Toilet (Inodors / Water closets)"@en)
+  AnnotationAssertion(rdfs:label :Sink "Sink (Piques / Wash basins)"@en)
+  AnnotationAssertion(rdfs:label :Shower "Shower (Plats de dutxa / Shower assemblies)"@en)
+  AnnotationAssertion(rdfs:label :SmallHome "Small home (≤3 rooms)"@en)
+  AnnotationAssertion(rdfs:label :LargeHome "Large home (≥4 rooms)"@en)
+  AnnotationAssertion(rdfs:label :ValidSmallHome "Valid small home — 1 toilet, 1 sink, 1 shower"@en)
+  AnnotationAssertion(rdfs:label :ValidLargeHome "Valid large home — 2 toilets, 2 sinks, 1 shower"@en)
+  AnnotationAssertion(rdfs:label :ValidHome "Valid home (conditional on room count)"@en)
+)

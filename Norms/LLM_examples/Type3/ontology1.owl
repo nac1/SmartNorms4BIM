@@ -1,0 +1,52 @@
+Prefix(:=<http://example.org/norms#>)
+Prefix(ifc:=<http://ifcowl.org/IFC2X3_TC1#>)
+Prefix(props:=<http://example.org/props#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+
+Ontology(<http://example.org/norms/valid-doors>
+
+  ############################################
+  # Declarations
+  ############################################
+  Declaration(Class(:Door))
+  Declaration(Class(:ValidDoor))
+
+  Declaration(DataProperty(props:width_simple_property))
+  Declaration(DataProperty(props:height_simple_property))
+
+  ############################################
+  # Core mapping: Door as IFC class
+  ############################################
+  SubClassOf(:Door ifc:IfcDoor)
+
+  ############################################
+  # Data property characteristics
+  ############################################
+  FunctionalDataProperty(props:width_simple_property)
+  FunctionalDataProperty(props:height_simple_property)
+
+  DataPropertyRange(props:width_simple_property xsd:decimal)
+  DataPropertyRange(props:height_simple_property xsd:decimal)
+
+  ############################################
+  # Norm formalization:
+  # "All the valid doors must have exactly one width property and one height property in the decimal range"
+  ############################################
+  EquivalentClasses(:ValidDoor
+    ObjectIntersectionOf(
+      :Door
+      DataExactCardinality(1 props:width_simple_property xsd:decimal)
+      DataExactCardinality(1 props:height_simple_property xsd:decimal)
+    )
+  )
+
+  ############################################
+  # Annotations
+  ############################################
+  AnnotationAssertion(rdfs:label :Door "Door (IfcDoor)"@en)
+  AnnotationAssertion(rdfs:label :ValidDoor "Valid door — must have exactly one width and one height (decimal)"@en)
+  AnnotationAssertion(rdfs:label props:width_simple_property "Width property (decimal, functional)"@en)
+  AnnotationAssertion(rdfs:label props:height_simple_property "Height property (decimal, functional)"@en)
+)
