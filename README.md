@@ -1,5 +1,5 @@
 <div align="center">
-<h1>SmartNomrs4BIM</h1>
+<h1>SmartNorms4BIM</h1>
 </div>
 
 ## About
