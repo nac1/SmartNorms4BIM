@@ -11,7 +11,7 @@ The datatype MinLength_100 was inferred, but this specification is not explicitl
 
  ### Example
 <user_query id="example-1">  
-Create a linguistic label where "Long" = unkwo , "Bridge"=class name, and "Length"=data property. This label must be modeled as a datatype with an appropriate prefix declaration (e.g., sid:LongBridgeLength). Its range may be xsd:string, xsd:float, xsd:decimal, or unspecified.  
+Create a linguistic label where "Long" = unknown , "Bridge" = class name, and "Length" = data property. This label must be modeled as a datatype with an appropriate prefix declaration (e.g., sid:LongBridgeLength). Its range may be xsd:string, xsd:float, xsd:decimal, or unspecified.  
 </user_query>
 
 <expert_response>  
