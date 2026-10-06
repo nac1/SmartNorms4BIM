@@ -61,10 +61,14 @@ This GitHub repository contains prompts, full prompt chains, norms, geometric al
 @misc{huitzil2026smartnorms4bim,
 	title        = {Semi-Automated Code Compliance Cheking based on Semantic Reasoning},
     author       = {Ignacio Huitzil and  Luc{\'i}a Pitarch and Marco Schorlemmer and Nardine Osman and Josep Coll and Fernando Bobillo},
-  	year         = {2026},
-  	publisher    = {SSRN},
- 	doi          = {10.2139/ssrn.6329621},
- 	url          = {https://ssrn.com/abstract=6329621},
+	journal 	 = {Automation in Construction},
+	volume		 = {193},
+	pages 		 = {107290},
+	year 		 = {2027},
+	issn 		 = {0926-5805},
+	doi 		 = {https://doi.org/10.1016/j.autcon.2026.107290},
+	url 		 = {https://www.sciencedirect.com/science/article/pii/S0926580526005315}
+  
 }
 ```
 <!-- ## ⚖️ Licence -->
